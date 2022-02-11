@@ -1,7 +1,7 @@
 import phonenumbers
 from phonenumbers import timezone,carrier,geocoder
-mob_num = input("Enter the Phone number for finding location and add +91 : ")
-phoneNumber = phonenumbers.parse(mob_num)
+mob_num = input("Enter the Phone number for finding location : ")
+phoneNumber = phonenumbers.parse(mob_num, "IN")
 time_zone = timezone.time_zones_for_geographical_number(phoneNumber)
 carr_ier = carrier.name_for_number(phoneNumber, "en")
 location = geocoder.description_for_number(phoneNumber, "en")
